@@ -16,7 +16,7 @@ toc: false
 ```js
 const rayon = view(
   Inputs.range(
-    [100, 1000],
+    [200, 1000],
     {step: 100, label: "Rayon"}
   )
 );
@@ -62,7 +62,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 
 ```js
-import * as proj4 from "npm:proj4";
+import proj4 from "https://cdn.skypack.dev/proj4";
 ```
 
 
@@ -83,7 +83,6 @@ async function getFilosofi(x, y, radius) {
 
 ```js
 const toto = view(LeafletMap2())
-toto
 ```
 
 ```js
@@ -99,7 +98,8 @@ circle.getLatLng()
 
 
 ```js
-var data = getFilosofi(3756295, 2889313, rayon)
+//var data = getFilosofi(3756295, 2889313, rayon)
+var data = getFilosofi(coordinates3035[0], coordinates3035[1], rayon)
 ```
 
 
