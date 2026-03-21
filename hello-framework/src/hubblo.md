@@ -9,6 +9,10 @@ toc: false
 </div>
 
 
+
+
+
+
 ```js
 const rayon = view(
   Inputs.range(
@@ -57,11 +61,11 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 ```
 
 
-
-
 ```js
-LeafletMap2() 
+import * as proj4 from "npm:proj4";
 ```
+
+
 
 
 ```js
@@ -73,6 +77,24 @@ async function getFilosofi(x, y, radius) {
 
   return data['message'];
 }
+```
+
+
+
+```js
+const toto = view(LeafletMap2())
+toto
+```
+
+```js
+var coordinates3035 = proj4('+proj=longlat +datum=WGS84 +no_defs +type=crs',
+                        '+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs',
+                        [toto.lng, toto.lat]);
+```
+
+
+```js
+circle.getLatLng()
 ```
 
 
