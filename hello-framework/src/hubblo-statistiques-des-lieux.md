@@ -7,8 +7,7 @@ viewof rayon = Inputs.range([200, 1000], {label: "Rayon", step: 100})
 ```
 
 ```js
-
-const container = html`<div style="position: relative;">
+viewof container = html`<div style="position: relative;">
     <div id="map" style="height: 400px;"></div>
     <button style="
       position:absolute;
@@ -409,9 +408,7 @@ const LeafletMap2 = (value = { lat: 43.596, lng: 1.4419, rayon: 200 }) => {
   const store = { value: curValue };
 
 
-  const button = container.querySelector("button");
-
-
+  
 
   
 
@@ -429,27 +426,7 @@ const LeafletMap2 = (value = { lat: 43.596, lng: 1.4419, rayon: 200 }) => {
   }
   map.on("click", onMapClick);
 
-  // 👉 bouton géolocalisation
-  button.onclick = () => {
-    if (!navigator.geolocation) {
-      alert("Géolocalisation non supportée");
-      return;
-    }
-
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const latlng = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
-        updatePosition(latlng);
-      },
-      (err) => {
-        alert("Erreur de géolocalisation : " + err.message);
-      }
-    );
-  };
-
+  
   Object.defineProperty(container, "value", {
     get() {
       return store.value;

@@ -22,14 +22,13 @@ const rayon = view(
 
 <div class="grid grid-cols-2" style="grid-auto-rows: 240px;">
   <div class="card" style="padding: 0;">
-  <div id="map" style = "height: 100%; width: ${width}"></div>
+
+
   </div>
   <div class="card" style="padding: 0;">
     ${resize((width, height) => graph_famille(width, height))}
   </div>
 </div>
-
-
 <div class="grid grid-cols-2" style="grid-auto-rows: 240px;">
   <div class="card" style="padding: 0;">
     ${resize((width, height) => graph_logement(width, height))}
@@ -44,9 +43,25 @@ const rayon = view(
 
 
 
+```js
+const container = display(document.createElement("div"));
+
+container.style =   "height: 400px;";
+const map = L.map(container)
+  .setView([43.596, 1.4419], 13);
+
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+})
+  .addTo(map);
+```
 
 
 
+
+```js
+LeafletMap2() 
+```
 
 
 ```js
@@ -67,18 +82,6 @@ var data = getFilosofi(3756295, 2889313, rayon)
 
 
 
-```js
-//div.map = "height: 400px;";
-
-const map = L.map("map")
-  .setView([43.596, 1.4419], 13);
-
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-})
-  .addTo(map);
-
-```
 
 
 
@@ -365,3 +368,45 @@ function graph_age(width, height){
 
 
 </style>
+
+
+```js echo
+const LeafletMap2 = (value = { lat: 43.596, lng: 1.4419, rayon: 200 }) => {
+  const { lat, lng, rayon } = value;
+  const curValue = { lat, lng };
+  const store = { value: curValue };
+
+
+  
+
+  
+
+  function updatePosition(latlng) {
+    store.value = latlng;
+    circle.setLatLng(latlng);
+    map.setView(latlng, 13);
+
+    container.dispatchEvent(new Event("input", { bubbles: true }));
+  }
+
+  // 👉 clic sur la carte
+  function onMapClick(e) {
+    updatePosition(e.latlng);
+  }
+  map.on("click", onMapClick);
+
+  
+  Object.defineProperty(container, "value", {
+    get() {
+      return store.value;
+    },
+    set(v) {
+      store.value = v;
+    }
+  });
+
+  container.value = curValue;
+
+  return container;
+};
+```
