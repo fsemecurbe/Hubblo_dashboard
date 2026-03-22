@@ -30,18 +30,18 @@ const setCoordCircle = (x) => (coord_circle.value = x);
 ```
 
 
+<div class="grid grid-cols-2" style="grid-auto-rows: 70px;">
+<div class="card" style="padding: 0;">
+Le nombre de ménages du ${data['unit'][1]} est de ${Math.round(data['men'][1])}, La taille des ménages du ${data['unit'][1]} est de ${Math.round(100 * data['ind'][1] / data['men'][1])/100}.  Le revenu moyen du ${data['unit'][1]} est de ${Math.round(data['ind_snv'][1]/data['ind'][1])}.
+</div>  
 
 
+</div>  
 
 
-
-
-
-
-
-<div class="grid grid-cols-2" style="grid-auto-rows: 240px;">
+<div class="grid grid-cols-2" style="grid-auto-rows: 200px;">
   <div class="card" style="padding: 0;">
-    <div id="map" style="width: ${width}; height: 240px">
+    <div id="map" style="width: ${width}; height: 200px">
 </div>  
     </div> 
   <div class="card" style="padding: 0;">
@@ -60,7 +60,6 @@ const setCoordCircle = (x) => (coord_circle.value = x);
 
 
 
-
 ```js
 const map = L.map('map').setView([43.596, 1.4419], 13);
 
@@ -68,6 +67,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 })
   .addTo(map);
+
 
 
   function onMapClick(e) {
@@ -125,6 +125,12 @@ var data = getFilosofi(coordinates3035[0], coordinates3035[1], rayon)
 
 ```js 
 var circle = L.circle([43.596, 1.4419], {radius : 200} )
+circle.setStyle({
+  color: 'black',        // border color
+  fillColor: '#add8e6',    // inside color
+  fillOpacity: 0.8
+});
+
 ```
 
 
