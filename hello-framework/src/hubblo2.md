@@ -13,14 +13,6 @@ toc: false
 
 
 
-```js
-const rayon = view(
-  Inputs.range(
-    [200, 1000],
-    {step: 100, label: "Rayon"}
-  )
-);
-```
 
 
 ```js
@@ -32,10 +24,20 @@ const setCoordCircle = (x) => (coord_circle.value = x);
 
 <div class="grid grid-cols-2" style="grid-auto-rows: 70px;">
 <div class="card" style="padding: 0;">
+
+```js
+const rayon = view(
+  Inputs.range(
+    [200, 1000],
+    {step: 100, label: "Rayon"}
+  )
+);
+```
+
+</div>  
+<div class="card" style="padding: 0;">
 Le nombre de ménages du ${data['unit'][1]} est de ${Math.round(data['men'][1])}, La taille des ménages du ${data['unit'][1]} est de ${Math.round(100 * data['ind'][1] / data['men'][1])/100}.  Le revenu moyen du ${data['unit'][1]} est de ${Math.round(data['ind_snv'][1]/data['ind'][1])}.
 </div>  
-
-
 </div>  
 
 
