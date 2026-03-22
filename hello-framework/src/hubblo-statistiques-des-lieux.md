@@ -408,6 +408,7 @@ const LeafletMap2 = (value = { lat: 43.596, lng: 1.4419, rayon: 200 }) => {
   const store = { value: curValue };
 
 
+
   
 
   
@@ -438,6 +439,6 @@ const LeafletMap2 = (value = { lat: 43.596, lng: 1.4419, rayon: 200 }) => {
 
   container.value = curValue;
 
-  return container;
+  //return container;
 };
 ```
