@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<title>Hello Framework</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight,alt,wide.9b64840a.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight,alt,wide.9b64840a.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="modulepreload" href="./_observablehq/client.c38fcbda.js">
+<link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/e324157d.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.31cd1366.js">
+<link rel="modulepreload" href="./_npm/leaflet@1.9.4/721623d8.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/7c43807f.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/5ced1d52.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.2/3785bf2d.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/720b7f0a.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/02d43215.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/aa00730b.js">
+<link rel="icon" href="./_file/observable.1af93621.png" type="image/png" sizes="32x32">
+<script type="module">
+
+import {define} from "./_observablehq/client.c38fcbda.js";
+
+define({id: "41941121", inputs: ["Mutable"], outputs: ["coord_circle","setCoordCircle"], body: (Mutable) => {
+let coord_circle = Mutable([43.596, 1.4419]);
+const setCoordCircle = (x) => (coord_circle.value = x);
+//mutablcoord_circlee coord_circle = [43.596, 1.4419]
+return {coord_circle,setCoordCircle};
+}});
+
+define({id: "60de360e", inputs: ["view","Inputs"], outputs: ["rayon"], body: (view,Inputs) => {
+const rayon = view(
+  Inputs.range(
+    [200, 1000],
+    {step: 100, label: "Rayon"}
+  )
+);
+return {rayon};
+}});
+
+define({id: "9e90540d", mode: "inline", inputs: ["data","display"], body: async (data,display) => {
+display(await(
+data['unit'][1]
+))
+}});
+
+define({id: "7d41a589", mode: "inline", inputs: ["data","display"], body: async (data,display) => {
+display(await(
+Math.round(data['men'][1])
+))
+}});
+
+define({id: "9e90540d-1", mode: "inline", inputs: ["data","display"], body: async (data,display) => {
+display(await(
+data['unit'][1]
+))
+}});
+
+define({id: "b230a641", mode: "inline", inputs: ["data","display"], body: async (data,display) => {
+display(await(
+Math.round(100 * data['ind'][1] / data['men'][1])/100
+))
+}});
+
+define({id: "9e90540d-2", mode: "inline", inputs: ["data","display"], body: async (data,display) => {
+display(await(
+data['unit'][1]
+))
+}});
+
+define({id: "ca4193bc", mode: "inline", inputs: ["data","display"], body: async (data,display) => {
+display(await(
+Math.round(data['ind_snv'][1]/data['ind'][1])
+))
+}});
+
+define({id: "4c5109bd", mode: "inline", inputs: ["resize","graph_famille","display"], body: async (resize,graph_famille,display) => {
+display(await(
+resize((width, height) => graph_famille(width, height))
+))
+}});
+
+define({id: "73299ad3", mode: "inline", inputs: ["resize","graph_logement","display"], body: async (resize,graph_logement,display) => {
+display(await(
+resize((width, height) => graph_logement(width, height))
+))
+}});
+
+define({id: "adc34ebc", mode: "inline", inputs: ["resize","graph_age","display"], body: async (resize,graph_age,display) => {
+display(await(
+resize((width, height) => graph_age(width, height))
+))
+}});
+
+define({id: "39560472", inputs: ["L","circle","setCoordCircle"], outputs: ["map","onMapClick"], body: (L,circle,setCoordCircle) => {
+const map = L.map('map').setView([43.596, 1.4419], 13);
+
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+})
+  .addTo(map);
+
+
+
+  function onMapClick(e) {
+    circle.setLatLng(e.latlng);
+    map.setView(e.latlng, 13);    
+    setCoordCircle([e.latlng.lat, e.latlng.lng]);
+    console.log(e)
+  }
+return {map,onMapClick};
+}});
+
+define({id: "89a8d1b7", inputs: ["map","onMapClick"], body: (map,onMapClick) => {
+map.on("click", onMapClick);
+}});
+
+define({id: "ff7b389c", outputs: ["proj4"], body: async () => {
+const {default: proj4} = await import("https://cdn.skypack.dev/proj4");
+
+return {proj4};
+}});
+
+define({id: "de7acff9", outputs: ["getFilosofi"], body: () => {
+async function getFilosofi(x, y, radius) {
+  const url = `https://hubblo.up.railway.app/filosofi?x=${x}&y=${y}&radius=${radius}`;
+
+  const response = await fetch(url);
+  const data = await response.json();
+
+  return data['message'];
+}
+return {getFilosofi};
+}});
+
+define({id: "5dbe6970", inputs: ["proj4","coord_circle"], outputs: ["coordinates3035"], body: (proj4,coord_circle) => {
+var coordinates3035 = proj4('+proj=longlat +datum=WGS84 +no_defs +type=crs',
+                        '+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs',
+                        [coord_circle[1], coord_circle[0]]);
+return {coordinates3035};
+}});
+
+define({id: "51544035", inputs: ["getFilosofi","coordinates3035","rayon"], outputs: ["data"], body: (getFilosofi,coordinates3035,rayon) => {
+//var data = getFilosofi(3756295, 2889313, rayon)
+var data = getFilosofi(coordinates3035[0], coordinates3035[1], rayon)
+return {data};
+}});
+
+define({id: "f5cb3fc9", inputs: ["L"], outputs: ["circle"], body: (L) => {
+var circle = L.circle([43.596, 1.4419], {radius : 200} )
+circle.setStyle({
+  color: 'black',        // border color
+  fillColor: '#add8e6',    // inside color
+  fillOpacity: 0.8
+});
+
+return {circle};
+}});
+
+define({id: "13be46ae", inputs: ["circle","map","display"], body: async (circle,map,display) => {
+display(await(
+circle.addTo(map)
+))
+}});
+
+define({id: "9859d4be", inputs: ["circle","rayon","display"], body: async (circle,rayon,display) => {
+display(await(
+circle.setRadius(rayon)
+))
+}});
+
+define({id: "956eefd3", inputs: ["data"], outputs: ["vars","libelle","values0","values1","data_famille"], body: (data) => {
+var vars = ['men_pauv', 'men_1ind', 'men_5ind', 'men_prop', 'men_fmp', 'men_coll', 'men_mais'];
+var libelle = ['Pauvres', 'Une personne', 'Nombreuses', 'Propriétaires', 'Mono-parentales', 'En immeuble', 'En maison']
+  
+var values0 = vars.map((element) => 100 * data[element][0] / data['men'][0]);
+var values1 = vars.map((element) => 100 * data[element][1] / data['men'][1]);
+
+var data_famille = []
+  
+for (const vari in vars) {
+var dico = {}
+dico['indicateur'] = libelle[vari] 
+dico[data['unit'][0]] = values0[vari]  
+dico[data['unit'][1]] = values1[vari]   
+data_famille.push(dico) 
+} 
+return {vars,libelle,values0,values1,data_famille};
+}});
+
+define({id: "d444850a", inputs: ["Plot","d3","data_famille","data"], outputs: ["graph_famille"], body: (Plot,d3,data_famille,data) => {
+function graph_famille(width, height){ 
+ return Plot.plot({
+  title: "Familles", 
+  label: "",
+  width,
+  height: height *.9,
+  
+  x: {
+    name: ""
+  },
+
+  y: {
+    axis: "left",
+    grid: true,
+    ticks: d3.range(0, Math.max(...data_famille.map(item => Math.max(item[data['unit'][0]], item[data['unit'][1]]))) , 10),
+    tickFormat: (d) => (d === 50 ? `${d}%` : `${d}`),
+    tickSize: 0
+  },
+  
+  color: { scheme: "dark2" },
+  
+  
+  
+  marks: [
+    
+ 
+    Plot.barY(data_famille, {
+      x: "indicateur",
+      y: data['unit'][0],
+      tip: true,
+      fill: "#ddd",
+
+      
+      insetRight: 0,
+      insetLeft: 0
+    }),
+    Plot.barY(data_famille, {
+      x: "indicateur",
+      y: data['unit'][1],
+      tip: true,
+      
+      fill: "#add8e6",
+
+      
+      insetRight: 10,
+      insetLeft: 10
+      
+    }),
+    
+    
+    
+    Plot.ruleY([0])
+  ]
+})
+}
+return {graph_famille};
+}});
+
+define({id: "4fcb7e09", inputs: ["data"], outputs: ["vars","libelle","somme0","values0","somme1","values1","data_logement","vars2"], body: (data) => {
+var vars = ['log_av45', 'log_45_70', 'log_70_90', 'log_ap90'];
+ const libelle = ['Avant 1945', '1945 et 1970', '1970 et 1990', 'Après 90' , 'Sociaux']
+  const somme0 = vars
+    .concat(['log_inc'])
+    .map(k => data?.[k]?.[0] || 0)
+    .reduce((a, b) => a + b, 0);
+
+  const values0 = vars.map(k => {
+    const v = data?.[k]?.[0] || 0;
+    return somme0 ? 100*v / somme0 : 0;
+  });
+
+  values0.push(100*data['log_soc'][0] / somme0)
+  
+  const somme1 = vars
+    .concat(['log_inc'])
+    .map(k => data?.[k]?.[1] || 0)
+    .reduce((a, b) => a + b, 0);
+
+  const values1 = vars.map(k => {
+    const v = data?.[k]?.[1] || 0;
+    return somme1 ? 100*v / somme1 : 0;
+  });
+
+  values1.push(100*data['log_soc'][1] / somme1)
+
+  var data_logement= []
+
+ const vars2 = vars.concat(['log_soc'])
+ for (const vari in vars2) {
+  
+ var dico = {}
+ dico['indicateur'] = libelle[vari] 
+ dico[data['unit'][0]] = values0[vari]  
+ dico[data['unit'][1]] = values1[vari]   
+ data_logement.push(dico) 
+ }
+return {vars,libelle,somme0,values0,somme1,values1,data_logement,vars2};
+}});
+
+define({id: "6ab28d5e", inputs: ["Plot","d3","data_logement","data"], outputs: ["graph_logement"], body: (Plot,d3,data_logement,data) => {
+function graph_logement(width, height){ 
+ return Plot.plot({
+  //title: "Logements", 
+  width,
+  label: "",
+  height: height ,
+  
+  y: {
+    axis: "left",
+    grid: true,
+    ticks: d3.range(0, Math.max(...data_logement.map(item => Math.max(item[data['unit'][0]], item[data['unit'][1]]))) , 10),
+    tickFormat: (d) => (d === 50 ? `${d}%` : `${d}`),
+    tickSize: 0
+  },
+  
+  color: { scheme: "dark2" },
+  
+  
+  
+  marks: [
+    
+ 
+    Plot.barY(data_logement, {
+      x: "indicateur",
+      y: data['unit'][0],
+      tip: true,
+      fill: "#ddd",
+
+      
+      insetRight: 0,
+      insetLeft: 0
+    }),
+    Plot.barY(data_logement, {
+      x: "indicateur",
+      y: data['unit'][1],
+      tip: true,      
+      fill: "#add8e6",
+      insetRight: 10,
+      insetLeft: 10
+      
+    }),
+    
+    
+    
+    Plot.ruleY([0])
+  ]
+})
+}
+return {graph_logement};
+}});
+
+define({id: "2114e467", inputs: ["data"], outputs: ["vars","libelle","somme0","values0","somme1","values1","data_age"], body: (data) => {
+var vars = ['ind_0_3', 'ind_4_5', 'ind_6_10', 'ind_18_24', 'ind_25_39',
+              'ind_40_54', 'ind_55_64', 'ind_65_79', 'ind_80p']
+var libelle =['0 - 3', '4 - 5', '6 - 10', '18 - 24', '25 - 39',
+              '40 - 54', '55 - 64', '65 - 79', '> 80p']
+  const somme0 = vars
+    .concat(['ind_inc'])
+    .map(k => data?.[k]?.[0] || 0)
+    .reduce((a, b) => a + b, 0);
+
+  const values0 = vars.map(k => {
+    const v = data?.[k]?.[0] || 0;
+    return somme0 ? 100 * v / somme0 : 0;
+  });
+
+  const somme1 = vars
+    .concat(['ind_inc'])
+    .map(k => data?.[k]?.[1] || 0)
+    .reduce((a, b) => a + b, 0);
+
+  const values1 = vars.map(k => {
+    const v = data?.[k]?.[1] || 0;
+    return somme1 ? 100 * v / somme1 : 0;
+  });
+
+  
+  var data_age= []
+
+ 
+ for (const vari in vars) {
+  
+ var dico = {}
+ dico['indicateur'] = libelle[vari] 
+ dico[data['unit'][0]] = values0[vari]  
+ dico[data['unit'][1]] = values1[vari]   
+ data_age.push(dico) 
+ }
+
+
+return {vars,libelle,somme0,values0,somme1,values1,data_age};
+}});
+
+define({id: "c5d10388", inputs: ["Plot","d3","data_age","data"], outputs: ["graph_age"], body: (Plot,d3,data_age,data) => {
+function graph_age(width, height){ 
+ return Plot.plot({
+  //title: "Âge des personnes", 
+  label: "",
+  width,
+  height: height,
+  y: {
+    axis: "left",
+    grid: true,
+    ticks: d3.range(0, Math.max(...data_age.map(item => Math.max(item[data['unit'][0]], item[data['unit'][1]]))) , 10),
+    tickFormat: (d) => (d === 50 ? `${d}%` : `${d}`),
+    tickSize: 0
+  },
+  color: { scheme: "dark2" }, 
+  marks: [
+    Plot.barY(data_age, {
+      x: "indicateur",
+      y: data['unit'][0],
+      tip: true,
+      fill: "#ddd",
+      insetRight: 0,
+      insetLeft: 0
+    }),
+    Plot.barY(data_age, {
+      x: "indicateur",
+      y: data['unit'][1],
+      tip: true,
+      fill: "#add8e6",
+      insetRight: 10,
+      insetLeft: 10      
+    }),
+    Plot.ruleY([0])
+  ]
+})
+}
+return {graph_age};
+}});
+
+</script>
+</head>
+<body>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="./">Hello Framework</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="./hubblo-statistiques-des-lieux">Hubblo : Statistiques des lieux</a></li>
+    <li class="observablehq-link"><a href="./hubblo">Untitled</a></li>
+    <li class="observablehq-link observablehq-link-active"><a href="./hubblo2">Untitled</a></li>
+  </ol>
+</nav>
+<script>{const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div class="hero">
+  <h1>Hubblo</h1>
+</div>
+<div class="observablehq observablehq--block"><!--:41941121:--></div>
+<div class="grid grid-cols-2" style="grid-auto-rows: 70px;">
+<div class="card" style="padding: 0;">
+<div class="observablehq observablehq--block"><!--:60de360e:--></div>
+</div>  
+<div class="card" style="padding: 0;">
+Le nombre de ménages du <observablehq-loading></observablehq-loading><!--:9e90540d:--> est de <observablehq-loading></observablehq-loading><!--:7d41a589:-->, La taille des ménages du <observablehq-loading></observablehq-loading><!--:9e90540d-1:--> est de <observablehq-loading></observablehq-loading><!--:b230a641:-->.  Le revenu moyen du <observablehq-loading></observablehq-loading><!--:9e90540d-2:--> est de <observablehq-loading></observablehq-loading><!--:ca4193bc:-->.
+</div>  
+</div>  
+<div class="grid grid-cols-2" style="grid-auto-rows: 200px;">
+  <div class="card" style="padding: 0;">
+    <div id="map" style="width: ${width}; height: 200px">
+</div>  
+    </div> 
+  <div class="card" style="padding: 0;">
+    <observablehq-loading></observablehq-loading><!--:4c5109bd:-->
+  </div>
+</div>
+<div class="grid grid-cols-2" style="grid-auto-rows: 240px;">
+  <div class="card" style="padding: 0;">
+    <observablehq-loading></observablehq-loading><!--:73299ad3:-->
+  </div>
+  <div class="card" style="padding: 0;">
+    <observablehq-loading></observablehq-loading><!--:adc34ebc:-->
+  </div>
+</div>
+<div class="observablehq observablehq--block"><!--:39560472:--></div>
+<div class="observablehq observablehq--block"><!--:89a8d1b7:--></div>
+<div class="observablehq observablehq--block"><!--:ff7b389c:--></div>
+<div class="observablehq observablehq--block"><!--:de7acff9:--></div>
+<div class="observablehq observablehq--block"><!--:5dbe6970:--></div>
+<div class="observablehq observablehq--block"><!--:51544035:--></div>
+<div class="observablehq observablehq--block"><!--:f5cb3fc9:--></div>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:13be46ae:--></div>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:9859d4be:--></div>
+<div class="observablehq observablehq--block"><!--:956eefd3:--></div>
+<div class="observablehq observablehq--block"><!--:d444850a:--></div>
+<div class="observablehq observablehq--block"><!--:4fcb7e09:--></div>
+<div class="observablehq observablehq--block"><!--:6ab28d5e:--></div>
+<div class="observablehq observablehq--block"><!--:2114e467:--></div>
+<div class="observablehq observablehq--block"><!--:c5d10388:--></div>
+<style>
+
+.hero h1 {
+  margin: 1rem 0;
+  padding: 1rem 0;
+  max-width: none;
+  font-size: 5vw;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(30deg, var(--theme-foreground-focus), currentColor);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+</style>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="./hubblo"><span>Untitled</span></a></nav>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2026-03-31T07:58:58">Mar 31, 2026</a>.</div>
+</footer>
+</div>
+</body>
+</html>
